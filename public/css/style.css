@@ -2,3 +2,11 @@ h1 {
     text-align: center;
     color: cornflowerblue;
 }
+
+.form-group {
+    margin: 1.5em;
+}
+
+.btn-primary {
+    margin: 1.5em;
+}
