@@ -1,9 +1,14 @@
 const app = require('express').Router()
 
+// GET /places/new
+app.get('/new', (req, res) => {
+    res.render('places/new')
+})
+
 // GET /places
 app.get('/', (req, res) => {
     let places = [{
-        name: 'Pizzeria Toro',
+        name: 'Za Pizzeria',
         city: 'Durham',
         state: 'North Carolina',
         cuisines: 'Italian, Pizza',
@@ -11,7 +16,7 @@ app.get('/', (req, res) => {
         // Photo by <a href="https://unsplash.com/@saundiii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Saundarya Srinivasan</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
     }, 
     {
-        name: 'Moonshadows',
+        name: 'Oceanview Restaurant',
         city: 'Malibu',
         state: 'California',
         cuisines: 'New American',
