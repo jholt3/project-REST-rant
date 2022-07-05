@@ -1,5 +1,11 @@
 const app = require('express').Router()
 
+// POST /places 
+app.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+})
+
 // GET /places/new
 app.get('/new', (req, res) => {
     res.render('places/new')
@@ -25,6 +31,8 @@ app.get('/', (req, res) => {
     }]
     res.render('places/index', {places})
 })
+
+
 
 module.exports = app
 
