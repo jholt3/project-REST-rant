@@ -13,7 +13,7 @@ router.get('/new', (req, res) => {
 // POST /places 
 router.post('/', (req, res) => {
     if (!req.body.pic) {
-        req.body.pic='http//placekitten.com/400/400'
+        req.body.pic='http://placekitten.com/250/250'
     }
     if (!req.body.city) {
         req.body.city='Anytown'
