@@ -1,38 +1,29 @@
-const app = require('express').Router()
+const router = require('express').Router()
+const places = require('../models/places.js')
 
-// POST /places 
-app.post('/', (req, res) => {
-    console.log(req.body)
-    res.send('POST /places')
-})
-
-// GET /places/new
-app.get('/new', (req, res) => {
-    res.render('places/new')
-})
-
-// GET /places
-app.get('/', (req, res) => {
-    let places = [{
-        name: 'Za Pizzeria',
-        city: 'Durham',
-        state: 'North Carolina',
-        cuisines: 'Italian, Pizza',
-        pic: '/images/pizza.jpg'
-        // Photo by <a href="https://unsplash.com/@saundiii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Saundarya Srinivasan</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    }, 
-    {
-        name: 'Oceanview Restaurant',
-        city: 'Malibu',
-        state: 'California',
-        cuisines: 'New American',
-        pic: '/images/beach-lunch.jpg' 
-        // Photo by <a href="https://unsplash.com/@fredasem?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Freddy Kearney</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    }]
+router.get('/', (req, res) => {
     res.render('places/index', {places})
 })
 
+// GET /places/new
+router.get('/new', (req, res) => {
+    res.render('places/new')
+})
 
+// POST /places 
+router.post('/', (req, res) => {
+    if (!req.body.pic) {
+        req.body.pic='http//placekitten.com/400/400'
+    }
+    if (!req.body.city) {
+        req.body.city='Anytown'
+    }
+    if (!req.body.state) {
+        req.body.state = 'USA'
+    }
+    places.push(req.body)
+    res.redirect('/places')
+})
 
-module.exports = app
+module.exports = router
 
