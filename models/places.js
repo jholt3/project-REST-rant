@@ -1,5 +1,3 @@
-
-
 // GET /places
 module.exports = [{
     name: 'Za Pizzeria',

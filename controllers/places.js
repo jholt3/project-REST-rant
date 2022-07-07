@@ -5,6 +5,7 @@ router.get('/', (req, res) => {
     res.render('places/index', {places})
 })
 
+
 // GET /places/new
 router.get('/new', (req, res) => {
     res.render('places/new')
@@ -20,7 +21,7 @@ router.get('/:id', (req, res) => {
         res.render('error404')
     }
     else{
-        res.render('places/show', {place: places[id]})
+        res.render('places/show', {place: places[id], id})
     }
 })
 
@@ -37,6 +38,21 @@ router.post('/', (req, res) => {
     }
     places.push(req.body)
     res.redirect('/places')
+})
+
+// DELETE /places
+router.delete('/places:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else{
+        places.splice(id, 1)
+        res.redirect('/places')
+    }
 })
 
 module.exports = router
