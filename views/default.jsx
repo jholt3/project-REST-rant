@@ -14,10 +14,10 @@ function Def (html) {
                         <a href='/'>Home</a>
                     </li>
                     <li>
-                        <a href='/'>Place</a>
+                        <a href='/places'>Place</a>
                     </li>
                     <li>
-                        <a href='/'>Add Place</a>
+                        <a href='/places/new'>Add Place</a>
                     </li>
                 </nav>
                 {html.children}
