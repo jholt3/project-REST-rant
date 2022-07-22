@@ -63,4 +63,6 @@ main {
 a {margin: 10px;
 }
 
-
+.col-sm-6 {
+    margin: auto;
+}
