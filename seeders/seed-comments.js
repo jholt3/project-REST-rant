@@ -11,6 +11,15 @@ async function seed() {
 
     place.comments.push(comment.id)
 
+    let comment2 = await db.Comment.create({
+        author: 'Starvin Marvin',
+        rant: true,
+        stars: 2.5,
+        content: 'Nice enough pizza, but the service was not great.'
+    })
+
+    place.comments.push(comment2.id)
+
     await place.save()
 
     process.exit()
