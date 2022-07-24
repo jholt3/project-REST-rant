@@ -70,7 +70,7 @@ function show (data) {
                     <div className='buttons'>
                <ul>
                     <li>
-                        <a href={`/places/${data.id}/edit`} className='btn btn-warning'>Edit</a>
+                        <a href={`/places/${data.place.id}/edit`} className='btn btn-warning'>Edit</a>
                     </li>
                     <li>
                         <form method='POST' action={`/places/${data.place.id}?_method=DELETE`} >
@@ -88,7 +88,7 @@ function show (data) {
                 <form method='POST' action={`/places/${data.place.id}?_method=PUT`}>
                     <div className='form-group'>
                         <label htmlFor='author'>Author</label>
-                        <input className='form-control' id='author' name='author' />
+                        <input className='form-control' id='author' name='author' required/>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='content'>Content</label>
@@ -96,7 +96,7 @@ function show (data) {
                     </div>
                     <div className='form-group'>
                         <label htmlFor='stars'>Star Rating</label>
-                        <input type='range' id='stars' name='stars' min='0' max='5'/>
+                        <input type='range' id='stars' name='stars' min='0' max='5' required/>
                     </div>
                     <div>
                         <input type='checkbox' id='rant' name='rant' value='rant'/>
