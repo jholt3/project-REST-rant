@@ -1,11 +1,9 @@
-const dotenv = require('dotenv')
+require('dotenv').config()
 const mongoose = require('mongoose')
-
-dotenv.config()
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 })
 
 module.exports.Place = require('./places')

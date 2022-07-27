@@ -1,6 +1,7 @@
 // Modules and Globals
 const express = require('express')
 const methodOverride = require('method-override')
+const cors = require('cors')
 const app = express()
 
 // Express Settings
@@ -10,6 +11,7 @@ app.use(methodOverride('_method'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(cors())
 
 
 // Controllers & Routes
