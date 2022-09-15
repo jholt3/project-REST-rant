@@ -15,11 +15,11 @@ app.use(cors())
 
 
 // Controllers & Routes
-app.use('/places', require('./controllers/places'))
+app.use('/posts', require('./controllers/posts'))
 
 
 app.get ('/', (req, res) => {
-    res.render('home')
+    res.render('about')
 })
 
 app.get ('*', (req, res) => {

@@ -1,35 +1,25 @@
-# Project REST-Rant
+# Project Post-it Backend 
 
-REST-Rant is an app where users can review restaurants.
-
-## Tech Usage
-
-**CSS Framework:** Bootstrap
-
-**Stack:** MongoDB, Express, NodeJS
-
-**Server-Side Rendering:** JSX
-
-**Node Modules:** method-override, dotenv, express-react-views
+This is the server directory for a blog web application named "Post-it"
 
 ## Routes
 
-
 | Method | Path  | Purpose |
 | :---:  | :---: |  :---  |
-| GET | /  | The home page |
-| GET | /places  | Index page listing all places |
-| GET | /places/new  | New form for a place |
-| POST | /places  | Create a new place |
-| GET| /places/:id |  Show one place in detail (Associated rants, new rant form, delete rant button) |
-| GET | /places/:id/edit  | Edit form for a place |
-| PUT | /places/:id  | Make changes to an existing place |
-| DELETE | /places/:id  | Delete a place |
-| POST | /places/:id/rant | Add rant to a place |
-| DELETE | /places/:id/rant/:rantId  | Delete a rant |
+| GET | /  | Home Page |
+| GET | /posts | Home page that displays all posts |
+| GET | /posts/new | Forms page to create a new post |
+| POST | /posts  | Create a new post |
+| GET | /posts/:id/edit  | Edit form for a post |
+| PUT | /posts/:id  | Make changes to an existing post |
+| DELETE | /posts/:id  | Delete a post |
 
-## Database
 
-## Planning
+## Technologies
 
-## Notes
+MongoDB, Express, NodeJS
+
+## References
+
+Referenced the following site for information on how to connect frontend to backend:
+https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/amp/

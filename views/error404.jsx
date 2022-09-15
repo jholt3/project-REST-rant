@@ -8,11 +8,7 @@ function error404 () {
                 <h1>404: PAGE NOT FOUND</h1>
                 <p>Oops, sorry, we can't find this page!</p>
                 <div>
-                <img src="/images/ice-cream.jpg" class="img-fluid" alt="Fallen Ice Cream Cone" />
-                <div>
-                Photo by <a href="https://unsplash.com/@rojekilian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sarah Kilian</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </div>
-
+                <img src="/images/pexels-ann-h-1888015.jpg" class="img-fluid" alt="image with tiles that spell error" />
                 </div>
             </main>
         </Def>
